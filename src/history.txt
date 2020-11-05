@@ -1,0 +1,241 @@
+   0 ls
+   1 echo '#! /bin/bash
+   2 status=$(docker container inspect -f '{{.State.Status}}' $2)
+   3 if [ $(echo $status) == 'running' ]; then 
+   4 ./src/docker_exec.sh $2;
+   5 else if [ $(echo $status) == 'exited' ]; then 
+   6 ./src/docker_start.sh $2
+   7 ./src/docker_exec.sh $2;
+   8 else 
+   9 ./src/docker_run.sh $1
+  10 ./src/docker_exec.sh $2;
+  11 fi' > ./
+  12 sh
+  13 touch docker_exec_run.sh
+  14 #! /bin/bash
+  15 status=$(docker container inspect -f '{{.State.Status}}' $2)
+  16 if [ $(echo $status) == 'running' ]; then 
+  17 ./src/docker_exec.sh $2;
+  18 else if [ $(echo $status) == 'exited' ]; then 
+  19 ./src/docker_start.sh $2
+  20 ./src/docker_exec.sh $2;
+  21 else 
+  22 ./src/docker_run.sh $1
+  23 ./src/docker_exec.sh $2;
+  24 ⁄
+  25 echo '#! /bin/bash
+  26 status=$(docker container inspect -f '{{.State.Status}}' $2)
+  27 if [ $(echo $status) == 'running' ]; then 
+  28 ./src/docker_exec.sh $2;
+  29 else if [ $(echo $status) == 'exited' ]; then 
+  30 ./src/docker_start.sh $2
+  31 ./src/docker_exec.sh $2;
+  32 else 
+  33 ./src/docker_run.sh $1
+  34 ./src/docker_exec.sh $2;
+  35 fi' > docker_exec_run.sh
+  36 cat docker_exec_run.sh
+  37 chmod 777 docker_exec_run.sh 
+  38 chmod 777 ./src/docker_exec.sh 
+  39 chmod 777 ./src/docker_s 
+  40 chmod 777 ./src/docker_start.sh 
+  41 chmod 777 ./src/docker_run.sh 
+  42 ls -al ./src
+  43 docker images
+  44 docker ps -al
+  45 ./docker_run.sh image_1 name_2
+  46 ./docker_run.sh image_1 name_1
+  47 docker ps
+  48 docker ps -a
+  49 docker images
+  50 docker ps -a
+  51 ll
+  52 ls -al
+  53 ./docker_exec_run.sh image_1 name_1
+  54 cat ./docker_exec_run.sh 
+  55 status=$(docker container inspect -f '{{.State.Status}}' name_1)
+  56 if [ $(echo $status) == 'running' ]; then 
+  57 ./src/docker_exec.sh $2;
+  58 else if [ $(echo $status) == 'exited' ]; then 
+  59 ./src/docker_start.sh $2
+  60 ./src/docker_exec.sh $2;
+  61 else 
+  62 ./src/docker_run.sh $1
+  63 ./src/docker_exec.sh $2;
+  64 fi
+  65 if [ $(echo $status) == 'running' ]; then 
+  66 ./src/docker_exec.sh $2;
+  67 else if [ $(echo $status) == 'exited' ]; then 
+  68 ./src/docker_start.sh $2
+  69 ./src/docker_exec.sh $2;
+  70 else 
+  71 ./src/docker_run.sh $1
+  72 ./src/docker_exec.sh $2
+  73 fi
+  74 if [ $(echo $status) == 'running' ]; then 
+  75 ./src/docker_exec.sh $2;
+  76 fi
+  77 if [ $(echo $status) == 'running' ]; then 
+  78 ./src/docker_exec.sh name_1;
+  79 fi
+  80 history
+
+   0 ls
+   1 echo '#! /bin/bash
+   2 status=$(docker container inspect -f '{{.State.Status}}' $2)
+   3 if [ $(echo $status) == 'running' ]; then 
+   4 ./src/docker_exec.sh $2;
+   5 else if [ $(echo $status) == 'exited' ]; then 
+   6 ./src/docker_start.sh $2
+   7 ./src/docker_exec.sh $2;
+   8 else 
+   9 ./src/docker_run.sh $1
+  10 ./src/docker_exec.sh $2;
+  11 fi' > ./
+  12 sh
+  13 history
+
+      1  docker images
+    2  docker ps
+    3  docker run
+    4  ls
+    5  mkdir Docker
+    6  ls
+    7  ps -p $$
+    8  mkdir ./Docker/docker_1
+    9  touch .Docker/docker_1/Dockerfile
+   10  touch .Docker/docker_1/Dockerfile
+   11  touch ./Docker/docker_1/Dockerfile
+   12  cd ./Docker/docker_1
+   13  nano Dockerfile
+   14  cat Dockerfile
+   15  $uname -a
+   16  uname -a
+   17  nano --version
+   18  sudo apt install nano
+   19  apt install nano
+   20  sudo apt-get install nano
+   21  docker build -t image_1 .
+   22  echo 'FROM ubuntu:latest' >> Dockerfile
+   23  cat Dockerfile
+   24  docker build -t image_1 .
+   25  docker images
+   26  id
+   27  edit Dockerfile
+   28  ed Dockerfil
+   29  ed Dockerfile
+   30  cat Dockerfile
+   31  exit
+   32  docker images
+   33  docker run -d --name docker_1 image_1
+   34  docker ps
+   35  docker ps -a
+   36  docker start docker_1
+   37  docker ps -a
+   38  docker rm docker_1
+   39  docker run --name docker_1 image_1
+   40  docker ps 
+   41  docker ps -a
+   42  docker rm docker_1
+   43  docker run -d --name docker_1 image_1 bash
+   44  docker ps -a
+   45  docker rm docker_1
+   46  docker run -d --name docker_1 "while true; do sleep 60; done" image_1 bash 
+   47  docker rm docker_1
+   48  docker run -d --name docker_1 image_1 bash  sleep 3000
+   49  docker ps -a
+   50  docker ps
+   51  docker run -it --name docker_1 image_1 bash
+   52  docker rm docker_1
+   53  docker run -it --name docker_1 image_1 bash
+   54  docker ps
+   55  history
+   56  echo 'FROM ubuntu:latest' >> Dockerfile
+   57  Dockerfile
+   58  cd ./Docker
+   59  ls
+   60  cd ./docker_1
+   61  echo `
+` >> Dockerfile
+   62  Dockerfile
+   63  echo Dockerfile
+   64  cat Dockerfile
+   65  touch docker_run.sh
+   66  echo '#! /bin/bash
+
+docker run -d --name="$2" -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro  $1 /bin/bash -c "while true; do sleep 60; done"' >> docker_run.sh
+   67  cat docker_run.sh
+   68  ./docker_run.sh
+   69  sudo ./docker_run.sh
+   70  chmod +x docker_run.sh
+   71  ll
+   72  ls -al
+   73  chmod 777 docker_run.sh
+   74  ls -al
+   75  ./docker_run.sh
+   76  ./docker_run.sh image_1
+   77  docker ps
+   78  docker stop naughty_keldysh
+   79  docker rm naughty_keldysh
+   80  ./docker_run.sh image_1 name_1
+   81  ./docker_run.sh image_1 name_2
+   82  docker ps
+   83  docker stop name_2
+   84  docker container inspect -f '{{.State.Status}}' name_2
+   85  docker container inspect -f '{{.State.Status}}' name_1
+   86  docker container inspect -f '{{.State.Status}}' name_3
+   87  if [ 2 = 2 ]; then echo 'kek'; else echo 'false'; fi
+   88  if [ 2 = 2 ]; then echo 'true'; else echo 'false'; fi
+   89  if [ 'docker container inspect -f '{{.State.Status}}' name_1 == 'running' ]; then echo 'true'; else echo 'false'; fi
+
+ds
+
+   90  if ["docker container inspect -f '{{.State.Status}}' name_1" == 'running']; then echo 'true'; else echo 'false'; fi
+   91  if [ "docker container inspect -f '{{.State.Status}}' name_1" == 'running' ]; then echo 'true'; else echo 'false'; fi
+   92  docker container inspect -f '{{.State.Status}}' name_1
+   93  if [ '22' = '22' ]; then echo 'true'; else echo 'false'; fi
+   94  if [ "docker container inspect -f '{{.State.Status}}' name_1" == 'running' ]; then echo 'true'; else echo 'false'; fi
+   95  if [ "docker container inspect -f '{{.State.Status}}' name_1" == 'running' ]; then echo 'true'; else echo 'false'; fi
+   96  status=$(docker container inspect -f '{{.State.Status}}' name_1)
+   97  status
+   98  echo status
+   99  status=$(docker container inspect -f '{{.State.Status}}' name_1)
+  100  docker container inspect -f '{{.State.Status}}' name_1
+  101  echo status
+  102  echo $status
+  103  history
+  104  docker container inspect -f '{{.State.Status}}' name_2
+  105  if [ "echo $status" == 'running' ]; then echo 'true'; else echo 'false'; fi
+  106  if [ echo $status == 'running' ]; then echo 'true'; else echo 'false'; fi
+  107  if [ (echo $status) == 'running' ]; then echo 'true'; else echo 'false'; fi
+  108  if [ $(echo $status) == 'running' ]; then echo 'true'; else echo 'false'; fi
+  109  status=$(docker container inspect -f '{{.State.Status}}' name_2)
+  110  if [ $(echo $status) == 'running' ]; then echo 'true'; else echo 'false'; fi
+  111  if [ $(echo $status) == 'exited' ]; then echo 'true'; else echo 'false'; fi
+  112  ls
+  113  mkdir src
+  114  touch ./src/docker_run.sh
+  115  touch ./src/docker_exec.sh
+  116  touch ./src/docker_start.sh
+  117  echo '#! /bin/bash' >> ./src/docker_exec.sh
+  118  docker exec -it --user=$(id -u):$(id -g $(whoami)) $1 bash
+  119  cat ./src/docker_exec.sh
+  120  echo '#! /bin/bash' >> ./src/docker_exec.sh
+  121* 
+  122  echo '#! /bin/bash' > ./src/docker_exec.sh
+  123  docker exec -it --user=$(id -u):$(id -g $(whoami)) $1 bash
+  124  echo '#! /bin/bash' > ./src/docker_exec.sh
+  125  echo ' > ./src/docker_exec.sh
+ds
+
+  126  echo '#! /bin/bash
+ docker exec -it --user=$(id -u):$(id -g $(whoami)) $1 bash' > ./src/docker_exec.sh
+  127  echo '#! /bin/bash docker run -d --name="$2" -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro  $1 /bin/bash -c "while true; do sleep 60; done"
+  128  echo '#! /bin/bash
+
+docker run -d --name="$2" -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro  $1 /bin/bash -c "while true; do sleep 60; done"' > ./src/docker_run.sh
+  129  echo '#! /bin/bash
+
+docker start $2' > ./src/docker_start.sh
+  130  sh
+  131  history
